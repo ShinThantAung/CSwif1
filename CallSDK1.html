@@ -1,0 +1,45 @@
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>js调用android代码</title>
+    <meta id="viewport" name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,minimal-ui">
+    <script type="text/javascript">
+
+        function print1(){
+           window.injectedObject.startFunction();
+        }
+
+        function print2(){
+           var content = document.getElementById("textarea1").value;
+		   print(content);
+           console.log(content);
+           window.injectedObject.startFunction(content);
+        }
+    </script>
+</head>
+<body>
+<br/><br/>
+<textarea rows="10" cols="30" id="textarea1" >
+defalut show textarea part1,
+defalut show textarea part2,
+defalut show textarea part3,
+defalut show textarea part4,
+defalut show textarea part5,
+defalut show textarea part6,
+defalut show textarea part7,
+defalut show textarea part8,
+
+
+
+
+
+</textarea>
+
+<br/>
+
+<button style="width:100px;height:50px" id="btn1" onclick="print2()">Print</button>
+
+<br/>
+
+</body>
+</html>
